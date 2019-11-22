@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Framework.Common.Services.DataAccess;
-using Framework.Common.Services.DataAccess.EntityDescriptions;
-using Framework.Contracts.Extension;
-using Framework.Contracts.Services.DataAccess;
-using Framework.Contracts.Services.DataAccess.EntityDescriptions;
+using Framework.Core.Services.DataAccess;
+using Framework.Core.Services.DataAccess.EntityDescriptions;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.Services.DataAccess;
+using Framework.Abstraction.Services.DataAccess.EntityDescriptions;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.Common.Model.Actions;

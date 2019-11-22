@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wallpaper.Common\Wallpaper.Common.csproj" />
+  </ItemGroup>
+
 </Project>

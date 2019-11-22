@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Framework.Abstraction.Services.DataAccess;
 using Framework.Contracts.Services.DataAccess;
 using MongoDB.Driver;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.Common.Model;
 using Plugin.Application.Wallpaper.Common.Model.Actions;
-using PluginMongoDb;
+using Plugin.DataAccess.MongoDb;
 
 namespace Plugin.Application.Wallpaper.Common.DataAccess.Implementation.Repositories
 {

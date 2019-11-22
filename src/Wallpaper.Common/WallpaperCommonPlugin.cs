@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Framework.Contracts.Extension;
-using Framework.Contracts.IocContainer;
-using Framework.Contracts.IocContainer.Registrations;
-using Framework.Contracts.Plugins;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.IocContainer;
+using Framework.Abstraction.IocContainer.Registrations;
+using Framework.Abstraction.Plugins;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.Common.DataAccess.Implementation.Managers;
@@ -15,11 +15,11 @@ using Plugin.Application.Wallpaper.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.DataAccess.Implementation.Managers;
 using Plugin.Application.Wallpaper.DataAccess.Implementation.Repositories;
-using Plugin.MongoDb.Interfaces;
+using Plugin.DataAccess.MongoDb.Interfaces;
 
 namespace Plugin.Application.Wallpaper.Common
 {
-    public class WallpaperCommonPlugin : Framework.Contracts.Plugins.Plugin, IGeneralPlugin
+    public class WallpaperCommonPlugin : Framework.Abstraction.Plugins.Plugin, IGeneralPlugin
     {
         public override PluginDescription Description { get; }
 

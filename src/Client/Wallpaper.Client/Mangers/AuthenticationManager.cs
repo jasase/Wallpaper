@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 using IdentityModel.OidcClient;
 
 namespace Plugin.Application.Wallpaper.Client.Mangers

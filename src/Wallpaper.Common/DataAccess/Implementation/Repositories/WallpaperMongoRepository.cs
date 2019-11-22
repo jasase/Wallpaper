@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
-using Framework.Common.Helper;
-using Framework.Contracts.Helper;
-using Framework.Contracts.Services.DataAccess;
+using Framework.Core.Helper;
+using Framework.Abstraction.Helper;
+using Framework.Abstraction.Services.DataAccess;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using Plugin.Application.Wallpaper.Common.Model;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Repositories;
-using PluginMongoDb;
+using Framework.Contracts.Services.DataAccess;
+using Plugin.DataAccess.MongoDb;
 
 namespace Plugin.Application.Wallpaper.DataAccess.Implementation.Repositories
 {

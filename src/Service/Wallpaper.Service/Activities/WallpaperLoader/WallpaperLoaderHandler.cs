@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Managers;
 

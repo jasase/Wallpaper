@@ -3,7 +3,7 @@ using Framework.Contracts.Services.DataAccess;
 using MongoDB.Driver;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.Common.Model.Clients;
-using PluginMongoDb;
+using Plugin.DataAccess.MongoDb;
 
 namespace Plugin.Application.Wallpaper.Common.DataAccess.Implementation.Repositories
 {

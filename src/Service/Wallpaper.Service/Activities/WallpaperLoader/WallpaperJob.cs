@@ -1,6 +1,6 @@
 ﻿using System;
-using Framework.Contracts.Extension;
-using Framework.Contracts.Services.Scheduling;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.Services.Scheduling;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Managers;
 

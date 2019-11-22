@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Framework.Abstraction" Version="1.0.30" />
+    <PackageReference Include="Framework.Core" Version="1.0.30" />
+    <PackageReference Include="Plugin.DataAccess.MongoDb" Version="1.0.30" />
+  </ItemGroup>
 
 </Project>

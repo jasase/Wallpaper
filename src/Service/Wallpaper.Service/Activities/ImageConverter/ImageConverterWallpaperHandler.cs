@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.IO;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 using Plugin.Application.Wallpaper.Common.Model;
 using Plugin.Application.Wallpaper.Common.Model.Visitors;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Managers;

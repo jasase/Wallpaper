@@ -1,7 +1,8 @@
-﻿using Framework.Contracts.Services.DataAccess;
+﻿using Framework.Abstraction.Services.DataAccess;
+using Framework.Contracts.Services.DataAccess;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.Common.Model.WorkItems;
-using PluginMongoDb;
+using Plugin.DataAccess.MongoDb;
 
 namespace Plugin.Application.Wallpaper.Common.DataAccess.Implementation.Repositories
 {

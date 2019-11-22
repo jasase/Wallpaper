@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
-using Framework.Contracts.Extension;
-using Framework.Contracts.Services.ThreadManaging;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.Services.ThreadManaging;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Managers;
 
 namespace Plugin.Application.Wallpaper.Activities.ImageConverter

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
-using Framework.Common.Helper;
-using Framework.Contracts.Extension;
-using Framework.Contracts.Helper;
-using Framework.Contracts.Messages;
-using Framework.Contracts.Services.ThreadManaging;
+using Framework.Core.Helper;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.Helper;
+using Framework.Abstraction.Messages;
+using Framework.Abstraction.Services.ThreadManaging;
 using Plugin.Application.Wallpaper.Client.Model;
 using Web.Commands.Wallpaper;
 

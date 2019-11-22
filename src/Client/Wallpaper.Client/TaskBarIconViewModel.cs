@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoUpdate.Abstraction;
-using Framework.Contracts.Extension;
-using Framework.Contracts.IocContainer;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.IocContainer;
 using Microsoft.Win32;
 using Plugin.Application.Wallpaper.Client.Mangers;
 using WpfUi.Common.Helper;

@@ -1,5 +1,5 @@
 ﻿using System;
-using Framework.Contracts.Entities;
+using Framework.Abstraction.Entities;
 
 namespace Plugin.Application.Wallpaper.Common.Model.Actions
 {

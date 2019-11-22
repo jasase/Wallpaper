@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Framework.Contracts.Extension;
-using Framework.Contracts.IocContainer;
-using Framework.Contracts.Services.ThreadManaging;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.IocContainer;
+using Framework.Abstraction.Services.ThreadManaging;
 using Plugin.Application.Wallpaper.Client.Model;
 using Plugin.Application.Wallpaper.Client.Monitors;
 

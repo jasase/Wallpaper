@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
-using Framework.Contracts.Helper;
-using Framework.Contracts.Services.DataAccess;
+using Framework.Abstraction.Helper;
+using Framework.Abstraction.Services.DataAccess;
 using Plugin.Application.Wallpaper.Common.Model.Clients;
 
 namespace Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers

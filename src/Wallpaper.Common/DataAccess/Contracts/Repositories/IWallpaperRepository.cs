@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Framework.Contracts.Helper;
-using Framework.Contracts.Services.DataAccess;
+using Framework.Abstraction.Helper;
+using Framework.Abstraction.Services.DataAccess;
 using Plugin.Application.Wallpaper.Common.Model;
 
 namespace Plugin.Application.Wallpaper.DataAccess.Contracts.Repositories

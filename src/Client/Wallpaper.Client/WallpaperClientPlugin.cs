@@ -2,11 +2,11 @@
 using System.Windows;
 using System.Windows.Controls;
 using AutoUpdate.Abstraction;
-using Framework.Contracts.Extension;
-using Framework.Contracts.IocContainer;
-using Framework.Contracts.IocContainer.Registrations;
-using Framework.Contracts.Plugins;
-using Framework.Contracts.Services.ThreadManaging;
+using Framework.Abstraction.Extension;
+using Framework.Abstraction.IocContainer;
+using Framework.Abstraction.IocContainer.Registrations;
+using Framework.Abstraction.Plugins;
+using Framework.Abstraction.Services.ThreadManaging;
 using Hardcodet.Wpf.TaskbarNotification;
 using WpfUi.Contracts.Plugins;
 using WpfUi.Contracts.Services;

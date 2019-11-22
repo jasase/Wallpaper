@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 using Microsoft.Win32;
 
 namespace Plugin.Application.Wallpaper.Client.Monitors

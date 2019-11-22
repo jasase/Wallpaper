@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Framework.Common.Helper;
-using Framework.Contracts.Helper;
+using Framework.Core.Helper;
+using Framework.Abstraction.Helper;
 using MongoDB.Bson;
 using MongoDB.Driver.GridFS;
 using Plugin.Application.Wallpaper.Common.Model;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Repositories;
-using Plugin.MongoDb.Interfaces;
+using Plugin.DataAccess.MongoDb.Interfaces;
 
 namespace Plugin.Application.Wallpaper.DataAccess.Implementation.Repositories
 {

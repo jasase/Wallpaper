@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 using Plugin.Application.Wallpaper.Client.Model;
 using Web.Wallpapers;
 

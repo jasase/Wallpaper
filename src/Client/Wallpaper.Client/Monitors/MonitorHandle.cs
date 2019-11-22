@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 
 namespace Plugin.Application.Wallpaper.Client.Monitors
 {

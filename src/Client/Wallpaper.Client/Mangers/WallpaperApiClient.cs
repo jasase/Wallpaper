@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Framework.Contracts.Extension;
+using Framework.Abstraction.Extension;
 using Newtonsoft.Json;
 using Web.Commands;
 

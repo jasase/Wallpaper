@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
-using Framework.Common.Services.DataAccess;
-using Framework.Common.Services.DataAccess.EntityDescriptions;
-using Framework.Contracts.Extension;
+using Framework.Core.Services.DataAccess;
+using Framework.Core.Services.DataAccess.EntityDescriptions;
+using Framework.Abstraction.Extension;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Repositories;
 using Plugin.Application.Wallpaper.Common.Model.WorkItems;
