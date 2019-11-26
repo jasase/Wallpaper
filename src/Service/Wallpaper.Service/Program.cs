@@ -1,12 +1,10 @@
-﻿using System;
+﻿using ServiceHost.Docker;
 
 namespace Wallpaper.Service
 {
-    class Program
+    class Program : Startup
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+            => new Program().Run(args);
     }
 }

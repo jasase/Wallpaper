@@ -43,8 +43,6 @@ namespace Plugin.Application.Wallpaper.Activities.Cleaners
                 {
                     _wallpaperActionManager.Delete(action.Id);
                 }
-
-
             }
         }
     }

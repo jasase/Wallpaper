@@ -9,7 +9,6 @@ using Framework.Abstraction.Services;
 using Framework.Abstraction.Services.Scheduling;
 using Plugin.Application.Wallpaper.DataAccess.Contracts.Managers;
 using Plugin.Application.Wallpaper.Activities.WallpaperLoader.Bing;
-using Plugin.MongoDb.Interfaces;
 using ServiceHost.Contracts;
 using Plugin.Application.Wallpaper.Activities.WallpaperLoader;
 using Plugin.Application.Wallpaper.Activities.WallpaperLoader.Google;
@@ -17,15 +16,15 @@ using System.Collections.Concurrent;
 using Plugin.Application.Wallpaper.Activities.ImageConverter;
 using Framework.Abstraction.Services.ThreadManaging;
 using Framework.Abstraction.Messages.EntityMessages;
-using Plugin.Application.Wallpaper.Common;
 using Plugin.Application.Wallpaper.Common.DataAccess.Contracts.Managers;
-using Plugin.Application.Wallpaper.Common.Model.Configurations;
-using Plugin.Application.Wallpaper.Activities.WallpaperDeployers;
 using Plugin.Application.Wallpaper.Activities.WallpaperLoader.Spotlight;
+using Plugin.DataAccess.MongoDb.Interfaces;
+using Wallpaper.Service;
+using Wallpaper.Service.Activities.WallpaperDeployers;
 
 namespace Plugin.Application.Wallpaper
 {
-    public class WallpaperServicePlugin : Framework.Contracts.Plugins.Plugin, IServicePlugin
+    public class WallpaperServicePlugin : Framework.Abstraction.Plugins.Plugin, IServicePlugin
     {
         public override PluginDescription Description { get; }
 
@@ -56,7 +55,7 @@ namespace Plugin.Application.Wallpaper
         private IEnumerable<WallpaperLoaderHandler> CreateLoaders(IWallpaperManager manager, ILogManager logManager, IWorkItemManager workItemManager)
         {
             yield return new WallpaperLoaderHandler<BingImage>(new BingWallpaperLoader(workItemManager), manager, workItemManager, logManager.GetLogger<WallpaperLoaderHandler>());
-            yield return new WallpaperLoaderHandler<GoogleEarthImageId>(new GoogleEarthImageLoader(workItemManager), manager, workItemManager, logManager.GetLogger<WallpaperLoaderHandler>());
+            //yield return new WallpaperLoaderHandler<GoogleEarthImageId>(new GoogleEarthImageLoader(workItemManager), manager, workItemManager, logManager.GetLogger<WallpaperLoaderHandler>());
             yield return new WallpaperLoaderHandler<ItemResult>(new SpotlightImageLoader(workItemManager), manager, workItemManager, logManager.GetLogger<WallpaperLoaderHandler>());
         }
 
@@ -64,6 +63,16 @@ namespace Plugin.Application.Wallpaper
         {
             var configManager = Resolver.GetInstance<IWallpaperDeployerConfigurationManager>();
             var manager = Resolver.GetInstance<IWallpaperManager>();
+
+            var settings = Resolver.GetInstance<WallpaperSetting>();
+            if (!string.IsNullOrEmpty(settings.DeployFolder))
+            {
+                var folder = new FolderDeployer(settings, manager);
+                foreach (var wallpaper in manager.GetAll())
+                {
+                    folder.Deploy(wallpaper);
+                }
+            }
 
             //foreach (var config in configManager.GetAll().OfType<OneDriveDeployerConfiguration>().Where(x => x.Active))
             //{
