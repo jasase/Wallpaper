@@ -25,7 +25,7 @@ namespace Plugin.Application.Wallpaper.Activities.ImageConverter
         public void Run(IManagedThreadHandle handle)
         {
             foreach (var input in _inputQueue.GetConsumingEnumerable())
-            {                
+            {
                 var wallpaperMaybe = _wallpaperManager.GetById(input.WallpaperId);
                 if (!wallpaperMaybe.HasValue)
                 {
@@ -39,6 +39,8 @@ namespace Plugin.Application.Wallpaper.Activities.ImageConverter
                 }
 
                 handler.ProcessFiles();
+
+                _logger.Info("Converter queue: {0}", _inputQueue.Count);
             }
         }
     }

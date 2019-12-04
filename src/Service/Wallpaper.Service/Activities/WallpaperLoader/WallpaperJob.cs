@@ -38,7 +38,7 @@ namespace Plugin.Application.Wallpaper.Activities.WallpaperLoader
                 catch (Exception ex)
                 {
                     _logger.Error(ex, "Error occurred during loading images from source {0}", loader.SourceName);
-                }
+                }                
             }
         }
     }

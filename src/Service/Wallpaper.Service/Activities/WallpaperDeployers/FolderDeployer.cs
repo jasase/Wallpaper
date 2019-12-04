@@ -30,9 +30,8 @@ namespace Wallpaper.Service.Activities.WallpaperDeployers
                         continue;
 
                     using (var stream = fileInfo.OpenWrite())
-                    using (var writer = new StreamWriter(stream))
                     {
-                        writer.Write(data.Value.Data);
+                        stream.Write(data.Value.Data, 0, data.Value.Data.Length);
                     }
                 }
             }
