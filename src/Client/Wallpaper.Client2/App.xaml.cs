@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Wallpaper.Client
+namespace Wallpaper.Client2
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -17,8 +17,10 @@ namespace Wallpaper.Client
         static App()
         {
             _clientApp = PublicClientApplicationBuilder.Create(ClientId)
-                .WithAuthority($"{Instance}{Tenant}")
+                .WithAuthority(AzureCloudInstance.AzurePublic, Tenant)                
+                //.WithAuthority($"{Instance}{Tenant}")                
                 .WithDefaultRedirectUri()
+                //.WithRedirectUri("http://localhost")
                 .Build();
             TokenCacheHelper.EnableSerialization(_clientApp.UserTokenCache);
         }
@@ -31,11 +33,11 @@ namespace Wallpaper.Client
         //   - for any Work or School accounts, use organizations
         //   - for any Work or School accounts, or Microsoft personal account, use common
         //   - for Microsoft Personal account, use consumers
-        private static string ClientId = "4a1aa1d5-c567-49d0-ad0b-cd957a47f842";
+        private static string ClientId = "4ec97560-d0e7-4679-a761-94b06cda56f4";
 
         // Note: Tenant is important for the quickstart. We'd need to check with Andre/Portal if we
         // want to change to the AadAuthorityAudience.
-        private static string Tenant = "common";
+        private static string Tenant = "a7041845-fc73-4cfd-97f6-5a6b2e47e0ee";
         private static string Instance = "https://login.microsoftonline.com/";
         private static IPublicClientApplication _clientApp;
 
