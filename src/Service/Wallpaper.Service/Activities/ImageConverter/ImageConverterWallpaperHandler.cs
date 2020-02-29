@@ -38,7 +38,7 @@ namespace Plugin.Application.Wallpaper.Activities.ImageConverter
             _generatedFiles = new List<WallpaperFileGenerated>();
             _images = new List<WallpaperFileImage>();
 
-            using (var fontStream = GetType().Assembly.GetManifestResourceStream("Plugin.Application.Wallpaper.Roboto-Regular.ttf"))
+            using (var fontStream = GetType().Assembly.GetManifestResourceStream("Wallpaper.Service.Roboto-Regular.ttf"))
             {
                 _fonts = new FontCollection();
                 _robotoFont = _fonts.Install(fontStream);
@@ -115,30 +115,24 @@ namespace Plugin.Application.Wallpaper.Activities.ImageConverter
 
         private void GeneratedImageWithCaption(WallpaperFileImage original)
         {
-            _logger.Debug("1");
             var fileContent = _wallpaperManager.GetFile(_wallpaper, original);
             if (!fileContent.HasValue) return;
 
-            _logger.Debug("2");
             var caption = CreateCaptions();
             if (string.IsNullOrEmpty(caption)) return;
 
-            _logger.Debug("3");
             using (var image = Image.Load(fileContent.Value.Data))
             using (var destStream = new MemoryStream())
             {
-                _logger.Debug("4");
                 var font = _robotoFont.CreateFont(14);
                 var size = TextMeasurer.Measure(caption, new RendererOptions(font));
                 var bounds = image.Bounds();
 
-                _logger.Debug("5");
                 var start = (bounds.Width / 2) - (size.Width / 2);
                 var point = new PointF(start, 14);
                 var boxLocation = new RectangleF(point, size);
                 boxLocation.Inflate(4, 4);
 
-                _logger.Debug("6");
                 image.Mutate(x => x.Fill(Rgba32.White, boxLocation));
                 image.Mutate(x => x.DrawText(caption, font, Rgba32.Black, point));
                 image.SaveAsPng(destStream);
@@ -152,7 +146,6 @@ namespace Plugin.Application.Wallpaper.Activities.ImageConverter
                         Position = WallpaperFileCaption.WallpaperFileThumbnailPosition.Top
                     }
                 };
-                _logger.Debug("7");
                 _wallpaperManager.AddFile(_wallpaper, file);
             }
         }

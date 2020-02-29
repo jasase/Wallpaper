@@ -57,7 +57,7 @@ namespace Wallpaper.Client2
                         .WithAccount(accounts.FirstOrDefault())
                         //.WithUseEmbeddedWebView(true)
                         //.WithParentActivityOrWindow(new WindowInteropHelper(this).Handle) // optional, used to center the browser on the window
-                        .WithParentActivityOrWindow() // optional, used to center the browser on the window
+                        //.WithParentActivityOrWindow() // optional, used to center the browser on the window
                         .WithPrompt(Prompt.SelectAccount)
                         .ExecuteAsync();
                 }

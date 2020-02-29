@@ -20,7 +20,7 @@ namespace Plugin.Application.Wallpaper.Activities.WallpaperLoader.Google
             Source = new WallpaperSource
             {
                 Name = "Google-EarthView",
-                BaseUri = new Uri("https://www.gstatic.com/prettyearth/assets/data/")
+                BaseUri = new Uri("https://www.gstatic.com/prettyearth/assets/data/v3/")
             };
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = Source.BaseUri;
