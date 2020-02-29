@@ -9,7 +9,7 @@ WORKDIR /src
 #COPY ["Wallpaper.Common/Wallpaper.Common.csproj", "Wallpaper.Common/"]
 COPY . .
 RUN dotnet restore "Service/Wallpaper.Service/Wallpaper.Service.csproj"
-WORKDIR "/src/Service/Wallpaper.Service"
+WORKDIR "Service/Wallpaper.Service"
 RUN dotnet build "Wallpaper.Service.csproj" -c Release -o /app/build
 
 FROM build AS publish
